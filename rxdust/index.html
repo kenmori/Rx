@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rx.js</title>
+</head>
+<body>
+<h2>rx</h2>
+<div id="content"></div>
+<h2>altkey + click</h2>
+<button id="btn">Click Me</button>
+<hr />
+
+<input id="input" type="button"/>
+
+
+event は配列として扱う →イベントを配列のように扱える
+(Observable) Rx.Observable.fromEvent('element : object','eventName : string','eventListenerOptions: object',[selector: observable])
+・オブザーエイブルシーケンスを作る。
+・event はオブザーエイブルのシーケンスに添付するもの
+・selector はイベントエミッターから１つのオブジェクトを返せる引数
+
+
+
+
+Rx.Observable
+Subscribes an observer to the observable sequence.
+オブザーブルシーケンス(ストリーム)にオブザーバーを発行します。
+
+
+<hr />
+<div>Rx.Observable.create(subscribe[fun])
+onNext、onComposeメソッドを使いストリームを作る。指定されたsubscribeの実装から、createWithDisposable methodのエイリアス。
+生じているobservle methodの実装関数を返す。使い捨てのobjectの中のラップされた任意の返している関数
+使い捨てにすることもできる。
+<a href="https://github.com/Reactive-Extensions/RxJS/blob/master/doc/api/core/operators/create.md">crete</a>
+return Observable
+    </div>
+<input type="button" id="crete" value="crete" />
+
+
+///////
+・map,reduce, merge,concat, fillterなどストリーム(Observable)を操作するメソッドをオペレーターという
+・Observableをどんどん作り、オペレータで操作してできあがったストリームをsubscribe(購読/値を受け取るようにする)するのが通常の使い方
+
+
+////
+
+<input type="button" id="btn3" value="btn3"/>
+<script src="lib/jquery-3.1.0.js"></script>
+<script src="node_modules/rx/dist/rx.all.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
