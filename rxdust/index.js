@@ -127,7 +127,26 @@ var observer4 = Rx.Observer.create(
     x => console.log(x),
     e => console.log(e.message),
     ()=> console.log('composit'));
-var subscription = source4.subscribe(observer4);
+
+
+
+//////////////////////////////
+// var subscription = source4.subscribe(observer4);
+// var ele1 = document.getElementById('click1');
+// var ele2 = document.getElementById('click2');
+// var out = document.getElementById('out');
+// var plus = Rx.Observable.fromEvent(ele1, 'click').map(1);
+// var minus = Rx.Observable.fromEvent(ele2, 'click').map(-1);
+//
+// var both = plus.merge(minus);
+// var curtValue = both.scan(0, function(acc, v){
+//     return acc + v;
+// });
+//
+// var htmlSet = Rx.Observer.create(function(v){
+//     out.innerHTML = v;
+// });
+// var subscription = curtValue.subscribe(htmlSet);
 
 
 
