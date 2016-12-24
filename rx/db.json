@@ -1,0 +1,30 @@
+{
+  "comments": [
+    {
+      "body": "some comment",
+      "id": 1,
+      "postId": 1
+    }
+  ],
+  "posts": [
+    {
+      "comments": "【postcss-cssnext】Container#eachDecl is deprecated. Use Container#walkDecls instead.",
+      "id": 1
+    },
+    {
+      "comments": "もりた",
+      "id": 2
+    }
+  ],
+  "profile": [
+    {
+      "name": "typicode"
+    }
+  ],
+
+  "state" : [
+    {
+      "bool" : true
+    }
+  ]
+}
