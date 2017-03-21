@@ -1,3 +1,23 @@
+var source = Rx.Observable.create(function(observer){
+    observer.onNext(42);
+    observer.onCompleted();
+    return function() {
+        console.log('disposed');
+    }
+})
+var subscription = sorce.subscribe(
+function(x){
+    console.log('Next: ' + x);
+},
+function (err){
+    console.log('Error: ' + err);
+},
+function (){
+    console.log('completed');
+}
+)
+
+
 var btnClicks = Rx.Observable.fromEvent($('#btn'),'click');
 btnClicks
 .filter(function(value){
@@ -147,6 +167,10 @@ var observer4 = Rx.Observer.create(
 //     out.innerHTML = v;
 // });
 // var subscription = curtValue.subscribe(htmlSet);
+
+
+
+
 
 
 

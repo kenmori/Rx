@@ -11,7 +11,7 @@ class Greet extends Component {
          .timerInterval()
          .pluck('interval')
          .take(3);
-    var subscription = source.subscribe(
+    source.subscribe(
         function (x) {
            console.log(x);
         },
